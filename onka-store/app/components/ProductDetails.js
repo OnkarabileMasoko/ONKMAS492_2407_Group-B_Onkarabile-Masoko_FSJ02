@@ -44,7 +44,7 @@ export default function ProductDetails({ product }) {
               <div key={review.id} className="mb-4 border-b pb-4">
                 <p className="font-medium">
                   {review.name} -{' '}
-                  <span className="text-gray-500">{review.date}</span>
+                  <span className="text-gray-500">{new Date(review.date).toLocaleDateString()}</span>
                 </p>
                 <p className="text-sm text-gray-600">{review.comment}</p>
                 <p className="text-sm font-semibold">Rating: {review.rating}</p>
